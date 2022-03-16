@@ -12,6 +12,7 @@ public class Person {
         this.email = email;
         this.age = age;
     }
+    public int getId() {return id;}
     public String getName() {
         return name;
     }
@@ -30,4 +31,5 @@ public class Person {
     public void setAge(int age) {
         this.age = age;
     }
+
 }
