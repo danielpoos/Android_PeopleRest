@@ -68,7 +68,8 @@ public class MainActivity extends AppCompatActivity {
         if (ageText.isEmpty()){ Toast.makeText(this, "no age", Toast.LENGTH_SHORT).show();return;}
         int age = Integer.parseInt(ageText);
         Person person = new Person(0, name, email, age);
-        RequestTask task = new RequestTask("POST","", url);
+        Gson jsonConvert = new Gson();
+        RequestTask task = new RequestTask("POST", jsonConvert.toJson(person), url);
         task.execute();
     }
 
@@ -87,7 +88,6 @@ public class MainActivity extends AppCompatActivity {
             bindingP.delete.setOnClickListener(v->{
                 RequestTask task = new RequestTask("DELETE", String.valueOf(actual.getId()),url);
                 task.execute();
-
             });
             return bindingP.getRoot().getRootView();
         }
