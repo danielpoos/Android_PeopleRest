@@ -19,6 +19,13 @@
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:id="@+id/id"
+            android:hint="ID"
+            android:visibility="gone"
+            android:inputType="textPersonName"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:id="@+id/name"
             android:hint="Name"
             android:inputType="textPersonName"/>
@@ -40,6 +47,11 @@
             android:layout_height="wrap_content"
             android:id="@+id/add"
             android:text="Add"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/change"
+            android:text="Change"/>
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
